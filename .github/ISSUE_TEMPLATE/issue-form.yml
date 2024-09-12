@@ -1,0 +1,93 @@
+name: Task Issue
+description: Use this template to create a new task issue.
+title: "[Task] - Title"
+labels: [task]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Description
+        _Describe the task or issue in detail._
+
+        ### Phase
+        _Select the current phase of the task:_
+        - [ ] Planning
+        - [ ] Development
+        - [ ] Testing
+        - [ ] Review
+        - [ ] Complete
+
+        ### Priority
+        _Choose the priority level:_
+        - [ ] High
+        - [ ] Medium
+        - [ ] Low
+
+        ### Status
+        _Indicate the current status:_
+        - [ ] To Do
+        - [ ] In Progress
+        - [ ] Done
+
+        ### Assignee(s)
+        _Assign the issue to one or more team members._
+
+        ### Due Date
+        _Set a due date for this task (e.g., YYYY-MM-DD):_
+
+        ### Solution Description
+        _Provide a brief description of how you plan to solve this issue._
+
+        ### Additional Notes
+        _Include any other notes or context that might be relevant to the task._
+
+        ### Labels
+        _Add relevant labels to help categorize this issue:_
+
+  - type: input
+    attributes:
+      label: Task Title
+      description: Enter the title of the task.
+      placeholder: Task Title
+
+  - type: input
+    attributes:
+      label: Due Date
+      description: Enter the due date (YYYY-MM-DD).
+      placeholder: YYYY-MM-DD
+
+  - type: textarea
+    attributes:
+      label: Solution Description
+      description: Describe how you plan to solve this issue.
+      placeholder: Solution description here...
+      isMultiline: true
+      minRows: 3
+      maxRows: 10
+
+  - type: checkbox
+    attributes:
+      label: Phases
+      options:
+        - Planning
+        - Development
+        - Testing
+        - Review
+        - Complete
+
+  - type: dropdown
+    attributes:
+      label: Priority
+      options:
+        - High
+        - Medium
+        - Low
+
+  - type: dropdown
+    attributes:
+      label: Status
+      options:
+        - To Do
+        - In Progress
+        - Done
